@@ -27,14 +27,18 @@ if(!isset($_COOKIE["isadmin"]))
    {
        if($_COOKIE["isadmin"]==1){
         echo '<h2 align="center">Welcome Admin, You made it</h2>';
+        echo '<h2 align="center">Your Flag is: string base64_encode('. $_POST["user_email"].' )</h2>';
+        
 
        }else{
     echo '<h2 align="center">Welcome User, you are not an admin yet</h2>';
+    
+    
    }
    }
    ?>
   </div>
-  <div align="right">
+  <div align="center">
     <a href="logout.php">Logout</a>
    </div>
    <br />
