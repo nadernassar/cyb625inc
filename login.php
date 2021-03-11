@@ -40,15 +40,18 @@ if(isset($_POST["login"]))
 <!DOCTYPE html>
 <html>
  <head>
-  <title>CYB626 Inc.</title>
+  <title>CYB625 Inc.</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  </head>
  <body>
+ <script type="text/javascript">
+alert("this site uses cookies, but we don't collect personal information");
+</script>
   <br />
   <div class="container">
-   <h2 align="center">Welcome to CYB626 Inc.</h2>
+   <h2 align="center">Welcome to CYB625 Inc.</h2>
    <br />
    <p>Your mission is to log in as an admin.</p>
    <p>First, you need to log in using your Pace email and password as password, then escalate your privilege to be an admin </br> Good Luck!</p>
