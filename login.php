@@ -19,7 +19,7 @@ if(isset($_POST["login"]))
  else
  {
   
-  if(($_POST["user_email"]=="john_smith@gmail.com")&& ($_POST["user_password"=="password"]))
+  if(($_POST["user_email"]=="john_smith@gmail.com") && ($_POST["user_password"=="password"]))
   {
    
      setcookie("isadmin", 0, time()+3600);
