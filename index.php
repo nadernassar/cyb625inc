@@ -27,7 +27,8 @@ if(!isset($_COOKIE["isadmin"]))
    {
        if($_COOKIE["isadmin"]==1){
        
-        echo '<h2 align="center">Welcome Admin, You made it</h2>';
+        echo '<h2 align="center"> You made it... you are an admin now</h2>';
+        echo '<a href=\"https://cyb625inc.azurewebsites.net/contracts/gov/detoxdrinksmarket-190326133630.pdf\"> Detox Drink Strategy doc </a>';
         $flag=base64_encode($_SESSION['user_email']);
         echo '<h2 align="center">Your Flag is:</br>'.$flag  . substr(md5(time()), 4, 4);'</h2>';
         
