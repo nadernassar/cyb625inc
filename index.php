@@ -21,10 +21,7 @@ if(!isset($_COOKIE["isadmin"]))
    <h2 align="center">Welcome to CYB625 Inc</h2>
    
    <br />
-   <div align="right">
-    <a href="logout.php">Logout</a>
-   </div>
-   <br />
+   
    <?php
    if(isset($_COOKIE["isadmin"]))
    {
@@ -37,5 +34,9 @@ if(!isset($_COOKIE["isadmin"]))
    }
    ?>
   </div>
+  <div align="right">
+    <a href="logout.php">Logout</a>
+   </div>
+   <br />
  </body>
 </html>
