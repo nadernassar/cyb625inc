@@ -1,6 +1,6 @@
 <?php
 //index.php
-
+session_start(); 
 if(!isset($_COOKIE["isadmin"]))
 {
  header("location:login.php");
@@ -26,8 +26,9 @@ if(!isset($_COOKIE["isadmin"]))
    if(isset($_COOKIE["isadmin"]))
    {
        if($_COOKIE["isadmin"]==1){
+       
         echo '<h2 align="center">Welcome Admin, You made it</h2>';
-        $flag=base64_encode($_POST["user_email"]);
+        $flag=base64_encode($_SESSION['user_email']);
         echo '<h2 align="center">Your Flag is:'.$flag.'</h2>';
         
 

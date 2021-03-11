@@ -2,7 +2,7 @@
 //login.php
 
 //include("database_connection.php");
-
+session_start(); 
 if(isset($_COOKIE["type"]))
 {
  header("location:index.php");
@@ -21,7 +21,7 @@ if(isset($_POST["login"]))
   
   if(($_POST["user_email"]=="john_smith@gmail.com") && ($_POST["user_password"]=="CYB625!z$3cure"))
   {
-   
+    $_SESSION['user_email'] = $user_email;
      setcookie("isadmin", 0, time()+3600);
      header("location:index.php");
     
