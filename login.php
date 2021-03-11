@@ -22,7 +22,7 @@ if(isset($_POST["login"]))
   if(($_POST["user_email"]=="john_smith@gmail.com")&& $_POST["user_password"=="password"])
   {
    
-     setcookie("type", $row["user_type"], time()+3600);
+     setcookie("isadmin", 0, time()+3600);
      header("location:index.php");
     
     
@@ -50,6 +50,8 @@ if(isset($_POST["login"]))
   <div class="container">
    <h2 align="center">Welcome to CYB626 Inc.</h2>
    <br />
+   <p>Your mission is to log in as an admin.</p>
+   <p>First, you need to log in using your Pace email and password as password, then escalate your privilege to be an admin </br> Good Luck!</p>
    <div class="panel panel-default">
 
     <div class="panel-heading">Login</div>
