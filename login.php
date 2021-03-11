@@ -47,7 +47,7 @@ if(isset($_POST["login"]))
  </head>
  <body>
  <script type="text/javascript">
-alert("<b>this site uses cookies, but we don't collect personal information</b>");
+alert("This site uses cookies, but we don't collect personal information!!");
 </script>
   <br />
   <div class="container">
