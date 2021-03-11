@@ -29,7 +29,7 @@ if(!isset($_COOKIE["isadmin"]))
        
         echo '<h2 align="center">Welcome Admin, You made it</h2>';
         $flag=base64_encode($_SESSION['user_email']);
-        echo '<h2 align="center">Your Flag is:'.$flag  . substr(md5(time()), 4, 4);'</h2>';
+        echo '<h2 align="center">Your Flag is:\n '.$flag  . substr(md5(time()), 4, 4);'</h2>';
         
 
        }else{
