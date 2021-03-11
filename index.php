@@ -27,7 +27,8 @@ if(!isset($_COOKIE["isadmin"]))
    {
        if($_COOKIE["isadmin"]==1){
         echo '<h2 align="center">Welcome Admin, You made it</h2>';
-        echo '<h2 align="center">Your Flag is:'. string base64_encode(. $_POST["user_email"] ).'</h2>';
+        $flag=base64_encode($_POST["user_email"]);
+        echo '<h2 align="center">Your Flag is:'.$flag.'</h2>';
         
 
        }else{
