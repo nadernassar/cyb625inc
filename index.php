@@ -1,7 +1,7 @@
 <?php
 //index.php
 
-if(!isset($_COOKIE["type"]))
+if(!isset($_COOKIE["isadmin"]))
 {
  header("location:login.php");
 }
@@ -25,9 +25,14 @@ if(!isset($_COOKIE["type"]))
    </div>
    <br />
    <?php
-   if(isset($_COOKIE["type"]))
+   if(isset($_COOKIE["isadmin"]))
    {
-    echo '<h2 align="center">Welcome User</h2>';
+       if($_COOKIE["isadmin"]==1){
+        echo '<h2 align="center">Welcome Admin, You made it</h2>';
+
+       }else{
+    echo '<h2 align="center">Welcome User, you are not an admin yet</h2>';
+   }
    }
    ?>
   </div>

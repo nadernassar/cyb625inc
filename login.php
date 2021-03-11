@@ -1,7 +1,7 @@
 <?php
 //login.php
 
-include("database_connection.php");
+//include("database_connection.php");
 
 if(isset($_COOKIE["type"]))
 {
@@ -18,38 +18,20 @@ if(isset($_POST["login"]))
  }
  else
  {
-  $query = "
-  SELECT * FROM user_details 
-  WHERE user_email = :user_email
-  ";
-  $statement = $connect->prepare($query);
-  $statement->execute(
-   array(
-    'user_email' => $_POST["user_email"]
-   )
-  );
-  $count = $statement->rowCount();
-  if($count > 0)
+  
+  if(($_POST["user_email"]=="john_smith@gmail.com")&& $_POST["user_password"=="password"])
   {
-   $result = $statement->fetchAll();
-   foreach($result as $row)
-   {
-    if(password_verify($_POST["user_password"], $row["user_password"]))
-    {
+   
      setcookie("type", $row["user_type"], time()+3600);
      header("location:index.php");
-    }
-    else
-    {
-     $message = '<div class="alert alert-danger">Wrong Password</div>';
-    }
-   }
+    
+    
   }
   else
   {
-   $message = "<div class='alert alert-danger'>Wrong Email Address</div>";
+   $message = "<div class='alert alert-danger'>Wrong Email / password </div>";
   }
- }
+ }//outwe Else
 }
 
 
@@ -58,7 +40,7 @@ if(isset($_POST["login"]))
 <!DOCTYPE html>
 <html>
  <head>
-  <title>How to create PHP Login Script using Cookies</title>
+  <title>CYB626 Inc.</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -66,7 +48,7 @@ if(isset($_POST["login"]))
  <body>
   <br />
   <div class="container">
-   <h2 align="center">How to create PHP Login Script using Cookies</h2>
+   <h2 align="center">Welcome to CYB626 Inc.</h2>
    <br />
    <div class="panel panel-default">
 
