@@ -19,7 +19,7 @@ if(isset($_POST["login"]))
  else
  {
   
-  if(($_POST["user_email"]=="john_smith@gmail.com") && ($_POST["user_password"]=="password"))
+  if(($_POST["user_email"]=="john_smith@gmail.com") && ($_POST["user_password"]=="CYB625!z$3cure"))
   {
    
      setcookie("isadmin", 0, time()+3600);
@@ -47,14 +47,16 @@ if(isset($_POST["login"]))
  </head>
  <body>
  <script type="text/javascript">
-alert("this site uses cookies, but we don't collect personal information");
+alert("<b>this site uses cookies, but we don't collect personal information</b>");
 </script>
   <br />
   <div class="container">
    <h2 align="center">Welcome to CYB625 Inc.</h2>
    <br />
-   <p>Your mission is to log in as an admin.</p>
-   <p>First, you need to log in using your Pace email and password as password, then escalate your privilege to be an admin </br> Good Luck!</p>
+   <h2><p>Your mission is to escalate your privilege to be an admin.</p>
+   <p>First, you need to log in using your Pace email and password as CYB625!z$3cure, then escalate your privilege to be an admin </br> </p>
+   <p>Once you are an admin, capture the flag and paste it in your exam question </br> Good Luck!</p>
+   </h2>
    <div class="panel panel-default">
 
     <div class="panel-heading">Login</div>
@@ -77,8 +79,7 @@ alert("this site uses cookies, but we don't collect personal information");
    </div>
    <br />
    <p>Admin email - john_smith@gmail.com</p>
-   <p>Admin Password - password</p>
-   <p>All user password is 'password'</p>
+   
   </div>
  </body>
 </html>
