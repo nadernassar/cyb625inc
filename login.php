@@ -53,10 +53,10 @@ alert("<b>this site uses cookies, but we don't collect personal information</b>"
   <div class="container">
    <h2 align="center">Welcome to CYB625 Inc.</h2>
    <br />
-   <h2><p>Your mission is to escalate your privilege to be an admin.</p>
-   <p>First, you need to log in using your Pace email and password as CYB625!z$3cure, then escalate your privilege to be an admin </br> </p>
-   <p>Once you are an admin, capture the flag and paste it in your exam question </br> Good Luck!</p>
-   </h2>
+   <h3><p>Your mission is to escalate your privilege to be an admin.</p>
+   <p>First, you need to log in using your Pace email and password as CYB625!z$3cure then escalate your privilege to be an admin </br></br> </p>
+   <p>Once you are an admin, capture the flag and paste it in your exam question </br></br> Good Luck!</p>
+   </h3>
    <div class="panel panel-default">
 
     <div class="panel-heading">Login</div>
