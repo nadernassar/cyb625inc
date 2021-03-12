@@ -34,7 +34,7 @@ $pattern = "/^$pattern.*$/m";
     echo ("you are". implode($matches[0]));
     $_SESSION["user_email"] = $matches[0];
      setcookie("isadmin", 0, time()+3600);
-     //header("location:index.php");
+     header("location:index.php");
   }else  {
    $message = "<div class='alert alert-danger'>Wrong Email / password </div>";
   }
