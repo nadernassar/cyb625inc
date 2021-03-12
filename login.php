@@ -3,7 +3,7 @@
 
 //include("database_connection.php");
 session_start(); 
-if(isset($_COOKIE["type"]))
+if(isset($_COOKIE["isadmin"]))
 {
  header("location:index.php");
 }
@@ -18,12 +18,12 @@ if(isset($_POST["login"]))
  }
  else
  {
-  //++++++++
+  
   $file = 'users.dat';
 $searchfor = $_POST["user_email"];
 
 // the following line prevents the browser from parsing this as HTML.
-header('Content-Type: text/plain');
+//header('Content-Type: text/plain');
 
 // get the file contents, assuming the file to be readable (and exist)
 $contents = file_get_contents($file);
@@ -31,26 +31,13 @@ $contents = file_get_contents($file);
 $pattern = preg_quote($searchfor, '/');
 // finalise the regular expression, matching the whole line
 $pattern = "/^$pattern.*$/m";
-// search, and store all matching occurences in $matches
-if(preg_match_all($pattern, $contents, $matches)){
-   echo "Found matches:\n";
-   echo implode("\n", $matches[0]);
-}
-else{
-   echo "No matches found";
-}
 
-  //+++++++++
-  if(($_POST["user_email"]=="john_smith@gmail.com") && ($_POST["user_password"]=="CYB625!z$3cure"))
+  if((preg_match_all($pattern, $contents, $matches)) && ($_POST["user_password"]=="CYB625!z$3cure"))
   {
     $_SESSION["user_email"] = $_POST["user_email"];
      setcookie("isadmin", 0, time()+3600);
      header("location:index.php");
-    
-    
-  }
-  else
-  {
+  }else  {
    $message = "<div class='alert alert-danger'>Wrong Email / password </div>";
   }
  }//outwe Else
