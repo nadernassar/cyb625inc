@@ -27,7 +27,7 @@ if(!isset($_COOKIE["isadmin"]))
    {
        if($_COOKIE["isadmin"]==1){
        
-        echo '<h2 align="center"> You made it... you are an admin now</h2>';
+        echo '<h2 align="center"> You made it'.  (explode("|", $_SESSION['user_email'])[1]);' ... you are an admin now</h2>';
         
         $flag=base64_encode($_SESSION['user_email']);
         echo '<h3 align="center">Your Flag is:</br>'.$flag  . substr(md5(time()), 6, 6);'</h3>';
