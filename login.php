@@ -85,7 +85,7 @@ alert("This site uses cookies, but we don't collect personal information!!");
     </div>
    </div>
    <br />
-   <p>Admin email - john_smith@gmail.com</p>
+   
    
   </div>
  </body>
