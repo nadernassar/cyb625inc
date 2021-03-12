@@ -1,6 +1,6 @@
 <?php
 //login.php
-header('Content-Type: text/plain');
+//header('Content-Type: text/plain');
 //include("database_connection.php");
 session_start(); 
 if(isset($_COOKIE["isadmin"]))
