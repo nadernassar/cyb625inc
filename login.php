@@ -22,9 +22,6 @@ if(isset($_POST["login"]))
   $file = 'users.dat';
 $searchfor = $_POST["user_email"];
 
-// the following line prevents the browser from parsing this as HTML.
-//header('Content-Type: text/plain');
-
 // get the file contents, assuming the file to be readable (and exist)
 $contents = file_get_contents($file);
 // escape special characters in the query
@@ -34,7 +31,7 @@ $pattern = "/^$pattern.*$/m";
 
   if((preg_match_all($pattern, $contents, $matches)) && ($_POST["user_password"]=="CYB625!z$3cure"))
   {
-    $_SESSION["user_email"] = $_POST["user_email"];
+    $_SESSION["user_email"] = $matches[0];
      setcookie("isadmin", 0, time()+3600);
      header("location:index.php");
   }else  {
