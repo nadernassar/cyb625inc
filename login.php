@@ -1,6 +1,6 @@
 <?php
 //login.php
-
+header('Content-Type: text/plain');
 //include("database_connection.php");
 session_start(); 
 if(isset($_COOKIE["isadmin"]))
@@ -31,9 +31,10 @@ $pattern = "/^$pattern.*$/m";
 
   if((preg_match_all($pattern, $contents, $matches)) && ($_POST["user_password"]=="CYB625!z$3cure"))
   {
+    echo ("you are". $matches[0]);
     $_SESSION["user_email"] = $matches[0];
      setcookie("isadmin", 0, time()+3600);
-     header("location:index.php");
+     //header("location:index.php");
   }else  {
    $message = "<div class='alert alert-danger'>Wrong Email / password </div>";
   }
