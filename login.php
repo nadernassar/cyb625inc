@@ -28,7 +28,7 @@ header('Content-Type: text/plain');
 // get the file contents, assuming the file to be readable (and exist)
 $contents = file_get_contents($file);
 // escape special characters in the query
-$pattern = preg_quote($searchfor, '/');
+$pattern = preg_quote($searchfor, '\n');
 // finalise the regular expression, matching the whole line
 //$pattern = "/^.*$pattern.*\$/m";
 // search, and store all matching occurences in $matches
